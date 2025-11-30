@@ -20,6 +20,7 @@
       --neon-blue: #00aaff;
       --neon-purple: #ae00ff;
       --neon-pink: #ff0095;
+      --glass: rgba(255,255,255,0.06);
     }
 
     header {
@@ -34,12 +35,14 @@
     header h1 {
       font-size: 3.8em;
       text-shadow: 0 0 20px var(--neon-purple);
+      margin: 0;
     }
 
     header p {
       color: #bbb;
       font-size: 1.2em;
       text-shadow: 0 0 10px var(--neon-blue);
+      margin: 6px 0 0 0;
     }
 
     .container {
@@ -57,7 +60,7 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
+      background: var(--glass);
       padding: 25px;
       border-radius: 15px;
       margin: 20px auto;
@@ -114,10 +117,77 @@
       backdrop-filter: blur(5px);
       border-top: 2px solid #111;
     }
+
+    /* WIKI styles */
+    .wiki-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 12px 15px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .wiki-item:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.6); }
+
+    /* Popup overlay */
+    .wiki-window {
+      position: fixed;
+      inset: 0;
+      display: none; /* hidden by default */
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .wiki-window.active { display: flex; }
+
+    .wiki-content {
+      background: linear-gradient(180deg, rgba(10,10,10,0.95), rgba(8,8,8,0.95));
+      border-radius: 12px;
+      max-width: 900px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 12px 50px rgba(0,0,0,0.7);
+      border: 1px solid rgba(255,255,255,0.06);
+      color: #eaeaea;
+      animation: popIn 240ms ease;
+      position: relative;
+    }
+
+    @keyframes popIn {
+      from { transform: translateY(10px) scale(0.98); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    .wiki-content h2 { margin-top: 0; color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+    .wiki-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .wiki-close:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.6); transform: translateY(-2px); }
+
+    /* small screens */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2em; }
+      iframe { height: 260px; }
+      .wiki-content { padding: 18px; }
+    }
   </style>
- <audio id="bg-audio" autoplay loop>
-  <source src="BEST of Nürburgring Supercar Sounds!.mp3" type="audio/mpeg">
-</audio>
+
+  <audio id="bg-audio" autoplay loop>
+    <source src="BEST of Nürburgring Supercar Sounds!.mp3" type="audio/mpeg">
+  </audio>
 </head>
 
 <body>
@@ -144,8 +214,44 @@
       <p>
         I'm an Argentinian guy who loves airplanes and cars.
         I really enjoy going to school sometimes, and I love electronics.
-On this website, you'll discover everything I like and am interested in.
+        On this website, you'll discover everything I like and am interested in.
       </p>
+    </div>
+
+    <h2>Wiki</h2>
+    <div class="card">
+      <h3 style="color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink);">My Wiki</h3>
+      <p>Click any article to open it in a neon pop‑up window.</p>
+
+      <div class="wiki-item" data-article="art1" tabindex="0">⚡ Article 1 – Description or info</div>
+      <div class="wiki-item" data-article="art2" tabindex="0">⚡ Article 2 – Extra details</div>
+      <div class="wiki-item" data-article="art3" tabindex="0">⚡ Article 3 – Related topics</div>
+    </div>
+
+    <!-- POPUP WINDOWS -->
+    <div id="art1" class="wiki-window" aria-hidden="true">
+      <div class="wiki-content" role="dialog" aria-labelledby="art1-title">
+        <button class="wiki-close" aria-label="Close" data-close="art1">✕</button>
+        <h2 id="art1-title">Article 1</h2>
+        <p>The BMW M3 GTR is a racing car based on the M3 E46, famous for competing in the American Le Mans Series in the early 2000s and for its starring role in the Need for Speed ​​video game.</p>
+      </div>
+    </div>
+
+    <div id="art2" class="wiki-window" aria-hidden="true">
+      <div class="wiki-content" role="dialog" aria-labelledby="art2-title">
+        <button class="wiki-close" aria-label="Close" data-close="art2">✕</button>
+        <h2 id="art2-title">Article 2</h2>
+        <p>
+BMW built a very limited street edition, of which only 10 units were manufactured. Its 4.0-liter V8 engine differed from the inline six-cylinder engine of the conventional M3.</p>
+      </div>
+    </div>
+
+    <div id="art3" class="wiki-window" aria-hidden="true">
+      <div class="wiki-content" role="dialog" aria-labelledby="art3-title">
+        <button class="wiki-close" aria-label="Close" data-close="art3">✕</button>
+        <h2 id="art3-title">Article 3</h2>
+        <p><img src="https://i.redd.it/the-car-that-dominated-the-alms-and-the-nurburgring-v0-6zxs0qm3h5tc1.jpg?width=1024&format=pjpg&auto=webp&s=66b50cc66ded427c115f029b26b041f8e459a6f6" alt="BMW M3 GTR" width="300"></p>
+      </div>
     </div>
 
     <footer>
@@ -153,16 +259,72 @@ On this website, you'll discover everything I like and am interested in.
     </footer>
 
   </div>
+
   <script>
-    // Reproduce el audio cuando el usuario toca o hace clic
+    // Audio enable for mobile
     const audio = document.getElementById('bg-audio');
     function enableAudio() {
-      audio.play();
+      if (audio && audio.paused) audio.play().catch(()=>{});
       document.removeEventListener('click', enableAudio);
       document.removeEventListener('touchstart', enableAudio);
     }
     document.addEventListener('click', enableAudio);
     document.addEventListener('touchstart', enableAudio);
+
+    // Wiki popup logic: open/close functions
+    function openWiki(id) {
+      const win = document.getElementById(id);
+      if (!win) return;
+      win.classList.add('active');
+      win.setAttribute('aria-hidden', 'false');
+      // trap focus: focus the close button
+      const closeBtn = win.querySelector('[data-close]');
+      if (closeBtn) closeBtn.focus();
+      document.body.style.overflow = 'hidden'; // prevent background scroll
+    }
+
+    function closeWiki(id) {
+      const win = document.getElementById(id);
+      if (!win) return;
+      win.classList.remove('active');
+      win.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // restore scroll
+    }
+
+    // click handlers for wiki items and close buttons
+    document.querySelectorAll('.wiki-item').forEach(el => {
+      const id = el.dataset.article;
+      el.addEventListener('click', ()=> openWiki(id));
+      el.addEventListener('keydown', (e)=> { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openWiki(id); } });
+    });
+
+    document.querySelectorAll('.wiki-close').forEach(btn => {
+      const id = btn.dataset.close;
+      btn.addEventListener('click', ()=> closeWiki(id));
+    });
+
+    // close when clicking outside content
+    document.querySelectorAll('.wiki-window').forEach(win => {
+      win.addEventListener('click', (e)=> {
+        if (e.target === win) { // clicked overlay
+          win.classList.remove('active');
+          win.setAttribute('aria-hidden','true');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    // close on ESC
+    document.addEventListener('keydown', (e)=>{
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.wiki-window.active').forEach(w => {
+          w.classList.remove('active');
+          w.setAttribute('aria-hidden','true');
+        });
+        document.body.style.overflow = '';
+      }
+    });
   </script>
 </body>
 </html>
+
