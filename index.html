@@ -3,110 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juan Cruz - Pagina de datos</title>
+  <title>Juan Cruz - Gamer Zone</title>
+
   <style>
     body {
-      background-color: #0f0f0f;
-      color: #e5e5e5;
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #e2e2e2;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 25px;
+
+    /* GLOW GAMER COLORS */
+    :root {
+      --neon-blue: #00aaff;
+      --neon-purple: #ae00ff;
+      --neon-pink: #ff0095;
     }
+
     header {
       text-align: center;
-      margin-bottom: 40px;
+      padding: 40px 20px;
+      border-bottom: 2px solid #222;
+      background: linear-gradient(90deg, rgba(0,170,255,0.1), rgba(174,0,255,0.1));
+      box-shadow: 0 0 25px var(--neon-blue);
     }
+
     header h1 {
-      margin: 0;
-      font-size: 3.2em;
-      font-weight: bold;
+      font-size: 3.8em;
+      text-shadow: 0 0 20px var(--neon-purple);
     }
+
     header p {
-      color: #aaa;
-      margin-top: 5px;
-      font-size: 1.1em;
+      color: #bbb;
+      font-size: 1.2em;
+      text-shadow: 0 0 10px var(--neon-blue);
     }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+      color: var(--neon-blue);
+      text-shadow: 0 0 18px var(--neon-blue);
+      margin-top: 50px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 20px auto;
+      max-width: 800px;
+      backdrop-filter: blur(7px);
+      box-shadow: 0 0 25px rgba(0,170,255,0.15);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
     .socials {
       text-align: center;
-      margin: 40px 0;
+      margin: 35px 0;
     }
+
     .socials a {
-      margin: 0 15px;
       text-decoration: none;
-      font-size: 1.2em;
-      color: #1e90ff;
+      font-size: 1.3em;
       font-weight: bold;
+      margin: 0 15px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      color: white;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+      box-shadow: 0 0 15px var(--neon-blue);
+      transition: 0.3s;
     }
+
     .socials a:hover {
-      text-decoration: underline;
+      box-shadow: 0 0 25px var(--neon-purple);
+      transform: scale(1.05);
     }
-    .video-wrapper {
-      text-align: center;
-      margin: 40px 0;
-    }
+
     iframe {
       width: 90%;
-      max-width: 600px;
-      height: 340px;
-      border-radius: 10px;
+      max-width: 650px;
+      height: 350px;
       border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 30px var(--neon-pink);
     }
-    .about-me {
-      margin-top: 50px;
-      font-size: 1.1em;
-      line-height: 1.6em;
-    }
+
     footer {
-      margin-top: 50px;
       text-align: center;
-      padding: 20px 0;
-      border-top: 1px solid #333;
+      padding: 25px;
+      margin-top: 60px;
       color: #777;
+      border-top: 2px solid #111;
+      background: linear-gradient(90deg, rgba(255,0,149,0.08), rgba(0,170,255,0.08));
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>Juan Cruz</h1>
+    <p>Bienvenido a mi Gamer Zone 🔥</p>
+  </header>
+
   <div class="container">
-    <header>
-      <h1>Juan Cruz</h1>
-      <p>Bienvenidos a mi página personal</p>
-    </header>
 
-    <section class="socials">
-      <h2>Mis Redes</h2>
-      <a href="https://www.instagram.com/juan_cruz_x2q?igsh=MTB0dXR6ZDl2MTR0dQ==" target="_blank">
-        Instagram
-      </a>
-      <a href="https://youtu.be/To_r4aLSVpQ?si=Ju9N2slFr36UzgSD" target="_blank">
-        YouTube
-      </a>
-    </section>
+    <h2>Mis Redes</h2>
+    <div class="card socials">
+      <a href="https://www.instagram.com/juan_cruz_x2q?igsh=MTB0dXR6ZDl2MTR0dQ==" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/watch?v=To_r4aLSVpQ" target="_blank">YouTube</a>
+    </div>
 
-    <section class="video-wrapper">
-      <h2>un video a eleccion mia</h2>
-      <iframe 
-        src="https://youtube.com/embed/r4aLSVpQ" 
+    <h2>Mi Video</h2>
+    <div class="card" style="text-align:center;">
+      <iframe src="https://www.youtube.com/embed/To_r4aLSVpQ"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        </iframe>
-    </section>
+        allowfullscreen>
+      </iframe>
+    </div>
 
-    <section class="about-me">
-      <h2>Sobre mí</h2>
+    <h2>Sobre mí</h2>
+    <div class="card">
       <p>
-       me gustan los video juegos,voy a clases y tengo que aprobar matematicas
-        no hago nada mas que ir al psicologo los lunes y a natacion martes miercoles y jueves
-        los quiero mucho y si quieren mas apoyenme.
+        Voy a clases, disfruto la vida y subo contenido cuando pinta.  
+        Esta es mi base gamer oficial, donde dejo mis redes y mis videos.  
+        Acá empieza mi setup digital ✨🔥.
       </p>
-    </section>
+    </div>
 
     <footer>
-      <p>© 2025 JC</p>
+      © 2025 Juan Cruz – Gamer Mode ON
     </footer>
+
   </div>
 </body>
 </html>
