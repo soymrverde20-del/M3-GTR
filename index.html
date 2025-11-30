@@ -3,196 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Web</title>
+  <title>Juan Cruz - Página Personal</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
+      background-color: #0f0f0f;
+      color: #e5e5e5;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #0a0f1c;
-      color: #e5eaf1;
-      overflow-x: hidden;
+      padding: 0;
     }
-
-    /* NAV */
-    nav {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 99;
-    }
-
-    nav .logo {
-      font-size: 26px;
-      font-weight: bold;
-      color: #6be4ff;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: #9fb4ca;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: #6be4ff;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 100px 40px;
-      text-align: center;
-      animation: fadeIn 1s ease;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-      background: linear-gradient(90deg, #6be4ff, #8b5bff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #c4d0e3;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
-      background: #6be4ff;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.25s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      background: #8b5bff;
-      color: white;
-    }
-
-    /* SECTIONS */
-    .section {
+    .container {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 25px;
-      border-radius: 12px;
-      margin-top: 30px;
-      backdrop-filter: blur(8px);
-      transition: 0.3s;
     }
-
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: #6be4ff;
-    }
-
-    h2 {
-      color: #6be4ff;
-      margin-top: 0;
-    }
-
-    /* FOOTER */
-    footer {
+    header {
       text-align: center;
-      padding: 40px;
-      margin-top: 40px;
-      color: #8ea3c1;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 40px;
     }
-
-    /* ANIMATIONS */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    header h1 {
+      margin: 0;
+      font-size: 3.2em;
+      font-weight: bold;
+    }
+    header p {
+      color: #aaa;
+      margin-top: 5px;
+      font-size: 1.1em;
+    }
+    .socials {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .socials a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #1e90ff;
+      font-weight: bold;
+    }
+    .socials a:hover {
+      text-decoration: underline;
+    }
+    .video-wrapper {
+      text-align: center;
+      margin: 40px 0;
+    }
+    iframe {
+      width: 90%;
+      max-width: 600px;
+      height: 340px;
+      border-radius: 10px;
+      border: none;
+    }
+    .about-me {
+      margin-top: 50px;
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #333;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <div class="logo">MiWeb</div>
-    <div>
-      <a href="#inicio">Inicio</a>
-      <a href="#sobre">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
+  <div class="container">
+    <header>
+      <h1>Juan Cruz</h1>
+      <p>Bienvenidos a mi página personal</p>
+    </header>
 
-  <section class="hero" id="inicio">
-    <h1>Tu Web. Tu Marca.</h1>
-    <p>Un sitio con estética gamer-corporativa, animado, responsivo y totalmente listo para despegar en GitHub Pages.</p>
-    <a class="btn" href="#sobre">Saber más</a>
-  </section>
+    <section class="socials">
+      <h2>Mis Redes</h2>
+      <a href="https://www.instagram.com/juan_cruz_x2q?igsh=MTB0dXR6ZDl2MTR0dQ==" target="_blank">
+        Instagram
+      </a>
+      <a href="https://youtu.be/8MS4RbJ_tEU?si=mJfwd9WwJ251Qssb" target="_blank">
+        YouTube
+      </a>
+    </section>
 
-  <div class="section">
-    <div class="card" id="sobre">
+    <section class="video-wrapper">
+      <h2>Mi video</h2>
+      <iframe 
+        src="https://www.youtube.com/embed/8MS4RbJ_tEU" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section class="about-me">
       <h2>Sobre mí</h2>
-      <p>.Juan es un perfil joven, auténtico y sin poses, con una propuesta de valor clara: vivir simple, aprender constante y disfrutar del proceso. Su día a día gira alrededor de estudiar, absorber conocimiento y moverse con un mindset práctico. No vende humo ni exagera logros; opera como es, y eso genera una marca personal muy genuina.
+      <p>
+        No hago nada más que ir a clases y disfrutar de mi vida.  
+        Me gusta compartir mis cosas, mis momentos y lo que hago en mis redes.  
+        Esta es mi página oficial, hecha para que cualquiera que me conozca tenga un lugar directo
+        para ver mis links, mis contenidos y lo que voy armando día a día.
+      </p>
+    </section>
 
-En el ecosistema digital, se mueve bajo el alias DreidRL, un identificador que ya está asociado a su presencia en YouTube. Su canal funciona como su “touchpoint” principal: un espacio donde muestra su estilo, su forma de ver el mundo y su evolución. No está obsesionado con métricas; su foco está en crear porque le gusta, no porque tenga que rendir cuentas.
-
-Su correo soymrverde2.0@gmail.com es su punto de contacto directo, mostrando que mantiene las cosas simples y accesibles, sin complicar el funnel de comunicación.
-
-La esencia de su historia se resume en una frase que define su identidad actual:
-“No hago nada más que ir a clases y disfrutar de mí vida.”
-Esta vibra lo posiciona como un perfil relajado, centrado y sin necesidad de demostrar nada a nadie. Su propuesta es minimalista: vivir, aprender y compartir lo que le nace.
-
-Desde una perspectiva de marca personal, este estilo se traduce en:
-• Autenticidad total: nada de máscaras, nada de sobreproducción.
-• Sencillez estratégica: hace lo que disfruta y no pretende abarcar más de la cuenta.
-• Naturalidad en su comunicación: habla como es, sin scripts ni artificios.
-• Presencia digital en crecimiento: YouTube como plataforma base, con espacio para expandirse.
-
-En términos de branding, Juan se posiciona como un “creador orgánico”: no fuerza procesos, no vende personalidad fabricada y no entra en el juego de la competitividad absurda. Su narrativa es fresca, limpia y transparente, lo cual —en un mercado saturado de ruido— es un activo diferencial.
-        .</p>
-    </div>
-
-    <div class="card">
-      <h2>Proyectos</h2>
-      <p>sin proyectos para mostrar al mundo.</p>
-    </div>
-
-    <div class="card" id="contacto">
-      <h2>Contacto</h2>
-      <p>.gmail: soymrverde2.0@gmail.com . youtube:https://youtube.com/@dr3idrl?si=-6FmuZGPWkHidPNo.</p>
-    </div>
+    <footer>
+      <p>© 2025 Juan Cruz</p>
+    </footer>
   </div>
-
-  <footer>
-    © 2025 – Sitio Web creado para GitHub Pages
-  </footer>
 </body>
 </html>
