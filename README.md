@@ -1,73 +1,176 @@
 # M3-GTR
+Random page
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Web</title>
 
-Sitio web con estética gamer-corporativa, animado, responsivo y totalmente listo para despegar en GitHub Pages.
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #0a0f1c;
+      color: #e5eaf1;
+      overflow-x: hidden;
+    }
 
-## 🎯 Características
+    /* NAV */
+    nav {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.02);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 99;
+    }
 
-- **Diseño moderno**: Interfaz gamer-corporativa con gradientes y efectos visuales
-- **Responsivo**: Adaptado para dispositivos móviles, tablets y desktops
-- **Animaciones**: Transiciones suaves y efectos de entrada elegantes
-- **Fácil de personalizar**: HTML y CSS bien estructurados
-- **GitHub Pages ready**: Listo para desplegar directamente en GitHub Pages
+    nav .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #6be4ff;
+      letter-spacing: 1px;
+    }
 
-## 📁 Estructura del proyecto
+    nav a {
+      color: #9fb4ca;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: .2s;
+    }
 
-```
-M3-GTR/
-├── index.html        # Página principal
-├── README.md         # Este archivo
-└── page/             # Carpeta de páginas adicionales
-```
+    nav a:hover {
+      color: #6be4ff;
+    }
 
-## 🚀 Cómo usar
+    /* HERO */
+    .hero {
+      padding: 100px 40px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
 
-1. **Clonar el repositorio**:
-   ```bash
-   git clone https://github.com/soymrverde20-del/M3-GTR.git
-   cd M3-GTR
-   ```
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #6be4ff, #8b5bff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-2. **Abrir localmente**:
-   - Abre `index.html` directamente en tu navegador, o
-   - Ejecuta un servidor local:
-     ```bash
-     python3 -m http.server 8000
-     # Luego abre http://localhost:8000
-     ```
+    .hero p {
+      font-size: 20px;
+      color: #c4d0e3;
+      max-width: 700px;
+      margin: auto;
+    }
 
-3. **Personalizar**:
-   - Edita el contenido en `index.html`
-   - Modifica los estilos en la sección `<style>`
-   - Cambia los colores y fuentes según tus preferencias
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 30px;
+      background: #6be4ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.25s;
+    }
 
-## 🎨 Paleta de colores
+    .btn:hover {
+      transform: scale(1.05);
+      background: #8b5bff;
+      color: white;
+    }
 
-- **Primario**: `#6be4ff` (Cyan)
-- **Secundario**: `#8b5bff` (Purple)
-- **Fondo**: `#0a0f1c` (Dark)
-- **Texto**: `#e5eaf1` (Light)
+    /* SECTIONS */
+    .section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-## 📝 Secciones
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 30px;
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+    }
 
-- **Inicio**: Presentación principal con hero section
-- **Sobre mí**: Espacio para tu historia y habilidades
-- **Proyectos**: Galería de tus trabajos y logros
-- **Contacto**: Enlaces a tus redes y datos de contacto
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #6be4ff;
+    }
 
-## 🔧 Tecnologías
+    h2 {
+      color: #6be4ff;
+      margin-top: 0;
+    }
 
-- HTML5
-- CSS3 (con propiedades modernas como `backdrop-filter`, `background-clip`)
-- JavaScript (opcional para funcionalidades adicionales)
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      margin-top: 40px;
+      color: #8ea3c1;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
 
-## 📄 Licencia
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(15px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
 
-Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+  <nav>
+    <div class="logo">MiWeb</div>
+    <div>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
 
-## 👤 Autor
+  <section class="hero" id="inicio">
+    <h1>Tu Web. Tu Marca.</h1>
+    <p>Un sitio con estética gamer-corporativa, animado, responsivo y totalmente listo para despegar en GitHub Pages.</p>
+    <a class="btn" href="#sobre">Saber más</a>
+  </section>
 
-[soymrverde20-del](https://github.com/soymrverde20-del)
+  <div class="section">
 
----
+    <div class="card" id="sobre">
+      <h2>Sobre mí</h2>
+      <p>Acá podés colocar tu historia, tus habilidades, tus logros o lo que quieras comunicar. Todo está optimizado para que se vea pro y limpio.</p>
+    </div>
 
-¡Haz tu web, haz tu marca! 🚀
+    <div class="card">
+      <h2>Proyectos</h2>
+      <p>Podés listar tus proyectos, trabajos, gameplays, mods, o lo que quieras mostrar al mundo.</p>
+    </div>
+
+    <div class="card" id="contacto">
+      <h2>Contacto</h2>
+      <p>Podés agregar tus redes, tu email o incluso integrar un formulario más adelante.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 – Sitio Web creado para GitHub Pages
+  </footer>
+
+</body>
+</html>
