@@ -9,12 +9,13 @@
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/images/03q1/267344/bmw-m3-gtr-photo-206912-s-original.jpg") no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Segoe UI', Tahoma, sans-serif;
       color: #e2e2e2;
     }
 
-    /* GLOW GAMER COLORS */
     :root {
       --neon-blue: #00aaff;
       --neon-purple: #ae00ff;
@@ -25,7 +26,8 @@
       text-align: center;
       padding: 40px 20px;
       border-bottom: 2px solid #222;
-      background: linear-gradient(90deg, rgba(0,170,255,0.1), rgba(174,0,255,0.1));
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(5px);
       box-shadow: 0 0 25px var(--neon-blue);
     }
 
@@ -63,6 +65,12 @@
       backdrop-filter: blur(7px);
       box-shadow: 0 0 25px rgba(0,170,255,0.15);
       border: 1px solid rgba(255,255,255,0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .socials {
@@ -101,9 +109,10 @@
       text-align: center;
       padding: 25px;
       margin-top: 60px;
-      color: #777;
+      color: #aaa;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
       border-top: 2px solid #111;
-      background: linear-gradient(90deg, rgba(255,0,149,0.08), rgba(0,170,255,0.08));
     }
   </style>
 </head>
@@ -124,18 +133,14 @@
 
     <h2>Mi Video</h2>
     <div class="card" style="text-align:center;">
-  <iframe 
-  src="https://www.youtube.com/embed/To_r4aLSVpQ"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowfullscreen>
-</iframe>
+      <iframe src="https://www.youtube.com/embed/To_r4aLSVpQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
     <h2>Sobre mí</h2>
     <div class="card">
       <p>
-        Voy a clases, disfruto la vida y subo contenido cuando pinta.  
-        Esta es mi base gamer oficial, donde dejo mis redes y mis videos.  
+        Voy a clases, disfruto la vida y subo contenido cuando pinta.
+        Esta es mi base gamer oficial, donde dejo mis redes y mis videos.
         Acá empieza mi setup digital ✨🔥.
       </p>
     </div>
