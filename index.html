@@ -183,14 +183,53 @@
       iframe { height: 260px; }
       .wiki-content { padding: 18px; }
     }
-  </style>
+    /* Custom Google Translate button */
+  .translate-box {
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+    padding: 8px 14px;
+    border-radius: 12px;
+    box-shadow: 0 0 18px var(--neon-blue);
+    display: inline-block;
+  }
+  .translate-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--neon-purple);
+  }
+
+  /* Hide Google default ugly styles */
+  .goog-te-gadget img { display: none !important; }
+  .goog-te-gadget-simple {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+  .goog-te-combo {
+    background: #0008;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    text-shadow: 0 0 6px black;
+  }
+</style>
 
   <audio id="bg-audio" autoplay loop>
     <source src="BEST of Nürburgring Supercar Sounds!.mp3" type="audio/mpeg">
   </audio>
+  <!-- Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es,pt,it,fr,de'}, 'google_translate');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </head>
 
 <body>
+  <div id="google_translate" class="translate-box" style="position:fixed; top:10px; right:10px; z-index:99999;"></div>
+
   <header>
     <h1>Juan Cruz</h1>
     <p>welcome to my Gamer Zone 🔥</p>
@@ -223,16 +262,16 @@
       <h3 style="color: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink);">My Wiki</h3>
       <p>Click any article to open it in a neon pop‑up window.</p>
 
-      <div class="wiki-item" data-article="art1" tabindex="0">⚡ Article 1 – Description or info</div>
-      <div class="wiki-item" data-article="art2" tabindex="0">⚡ Article 2 – Extra details</div>
-      <div class="wiki-item" data-article="art3" tabindex="0">⚡ Article 3 – Related topics</div>
+      <div class="wiki-item" data-article="art1" tabindex="0">⚡ Article 1 – about m3 gtr</div>
+      <div class="wiki-item" data-article="art2" tabindex="0">⚡ Article 2 – car specifications</div>
+      <div class="wiki-item" data-article="art3" tabindex="0">⚡ Article 3 – image</div>
     </div>
 
     <!-- POPUP WINDOWS -->
     <div id="art1" class="wiki-window" aria-hidden="true">
       <div class="wiki-content" role="dialog" aria-labelledby="art1-title">
         <button class="wiki-close" aria-label="Close" data-close="art1">✕</button>
-        <h2 id="art1-title">Article 1</h2>
+        <h2 id="about m3 gtr">Article 1</h2>
         <p>The BMW M3 GTR is a racing car based on the M3 E46, famous for competing in the American Le Mans Series in the early 2000s and for its starring role in the Need for Speed ​​video game.</p>
       </div>
     </div>
@@ -240,7 +279,7 @@
     <div id="art2" class="wiki-window" aria-hidden="true">
       <div class="wiki-content" role="dialog" aria-labelledby="art2-title">
         <button class="wiki-close" aria-label="Close" data-close="art2">✕</button>
-        <h2 id="art2-title">Article 2</h2>
+        <h2 id="car specifications">Article 2</h2>
         <p>
 BMW built a very limited street edition, of which only 10 units were manufactured. Its 4.0-liter V8 engine differed from the inline six-cylinder engine of the conventional M3.</p>
       </div>
@@ -249,7 +288,7 @@ BMW built a very limited street edition, of which only 10 units were manufacture
     <div id="art3" class="wiki-window" aria-hidden="true">
       <div class="wiki-content" role="dialog" aria-labelledby="art3-title">
         <button class="wiki-close" aria-label="Close" data-close="art3">✕</button>
-        <h2 id="art3-title">Article 3</h2>
+        <h2 id="m3 gtr image">Article 3</h2>
         <p><img src="https://i.redd.it/the-car-that-dominated-the-alms-and-the-nurburgring-v0-6zxs0qm3h5tc1.jpg?width=1024&format=pjpg&auto=webp&s=66b50cc66ded427c115f029b26b041f8e459a6f6" alt="BMW M3 GTR" width="300"></p>
       </div>
     </div>
