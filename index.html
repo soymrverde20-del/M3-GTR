@@ -1,111 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Mi Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página personal de DreidRL">
+    <title>DreidRL | Página Personal</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #111, #222);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: #181818;
+            padding: 40px 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #00e0ff;
+        }
+        header p {
+            color: #aaa;
+            font-size: 1.1em;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        a {
+            color: #00e0ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        footer {
+            background: #111;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        .social {
+            margin: 15px 0;
+        }
+        .social a {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-        <style>
-                  * { box-sizing: border-box; }
-            body {
-                  margin: 0;
-                        font-family: "Segoe UI", Arial, sans-serif;
-                              background: #0a0f1c;
-                                    color: #e5eaf1;
-                                          overflow-x: hidden;
-                                              }
+    <header>
+        <h1>DreidRL</h1>
+        <p>Bienvenido a mi rincón personal en internet</p>
+    </header>
 
-                                                  /* NAV */
-                                                      nav {
-                                                            padding: 20px 40px;
-                                                                  display: flex;
-                                                                        justify-content: space-between;
-                                                                              align-items: center;
-                                                                                    background: rgba(255,255,255,0.02);
-                                                                                          backdrop-filter: blur(12px);
-                                                                                                border-bottom: 1px solid rgba(255,255,255,0.05);
-                                                                                                      position: sticky;
-                                                                                                            top: 0;
-                                                                                                                  z-index: 99;
-                                                                                                                      }
+    <section>
+        <div class="card">
+            <h2>💬 Sobre mí</h2>
+            <p>No hago nada más que ir a clases y disfrutar de mi vida :)</p>
+        </div>
 
-                                                                                                                          nav .logo {
-                                                                                                                                font-size: 26px;
-                                                                                                                                      font-weight: bold;
-                                                                                                                                            color: #6be4ff;
-                                                                                                                                                  letter-spacing: 1px;
-                                                                                                                                                      }
+        <div class="card">
+            <h2>📺 Mi canal de YouTube</h2>
+            <p>Sígueme en YouTube como <strong>@dreidrl</strong></p>
+            <p><a href="https://www.youtube.com/@dreidrl" target="_blank">Ir a mi canal</a></p>
+        </div>
 
-                                                                                                                                                          nav a {
-                                                                                                                                                                color: #9fb4ca;
-                                                                                                                                                                      margin-left: 20px;
-                                                                                                                                                                            text-decoration: none;
-                                                                                                                                                                                  font-weight: 500;
-                                                                                                                                                                                        transition: .2s;
-                                                                                                                                                                                            }
+        <div class="card">
+            <h2>📧 Contacto</h2>
+            <p>Puedes escribirme a: <a href="mailto:soymrverde2.0@gmail.com">soymrverde2.0@gmail.com</a></p>
+        </div>
+    </section>
 
-                                                                                                                                                                                                nav a:hover {
-                                                                                                                                                                                                      color: #6be4ff;
-                                                                                                                                                                                                          }
+    <footer>
+        <p>© 2025 DreidRL — Todos los derechos reservados</p>
+    </footer>
 
-                                                                                                                                                                                                              /* HERO */
-                                                                                                                                                                                                                  .hero {
-                                                                                                                                                                                                                        padding: 100px 40px;
-                                                                                                                                                                                                                              text-align: center;
-                                                                                                                                                                                                                                    animation: fadeIn 1s ease;
-                                                                                                                                                                                                                                        }
-
-                                                                                                                                                                                                                                            .hero h1 {
-                                                                                                                                                                                                                                                  font-size: 48px;
-                                                                                                                                                                                                                                                        margin-bottom: 10px;
-                                                                                                                                                                                                                                                              background: linear-gradient(90deg, #6be4ff, #8b5bff);
-                                                                                                                                                                                                                                                                    -webkit-background-clip: text;
-                                                                                                                                                                                                                                                                    background-clip: text;
-                                                                                                                                                                                                                                                                    -webkit-text-fill-color: transparent;
-                                                                                                                                                                                                                                                                          color: transparent;
-                                                                                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                                                                                                  .hero p {
-                                                                                                                                                                                                                                                                                        font-size: 20px;
-                                                                                                                                                                                                                                                                                              color: #c4d0e3;
-                                                                                                                                                                                                                                                                                                    max-width: 700px;
-                                                                                                                                                                                                                                                                                                          margin: auto;
-                                                                                                                                                                                                                                                                                                              }
-
-                                                                                                                                                                                                                                                                                                                  .btn {
-                                                                                                                                                                                                                                                                                                                        display: inline-block;
-                                                                                                                                                                                                                                                                                                                              margin-top: 25px;
-                                                                                                                                                                                                                                                                                                                                    padding: 14px 30px;
-                                                                                                                                                                                                                                                                                                                                          background: #6be4ff;
-                                                                                                                                                                                                                                                                                                                                                color: #000;
-                                                                                                                                                                                                                                                                                                                                                      font-weight: bold;
-                                                                                                                                                                                                                                                                                                                                                            border-radius: 8px;
-                                                                                                                                                                                                                                                                                                                                                                  text-decoration: none;
-                                                                                                                                                                                                                                                                                                                                                                        transition: 0.25s;
-                                                                                                                                                                                                                                                                                                                                                                            }
-
-                                                                                                                                                                                                                                                                                                                                                                                .btn:hover {
-                                                                                                                                                                                                                                                                                                                                                                                      transform: scale(1.05);
-                                                                                                                                                                                                                                                                                                                                                                                            background: #8b5bff;
-                                                                                                                                                                                                                                                                                                                                                                                                  color: white;
-                                                                                                                                                                                                                                                                                                                                                                                                      }
-
-                                                                                                                                                                                                                                                                                                                                                                                                          /* SECTIONS */
-                                                                                                                                                                                                                                                                                                                                                                                                              .section {
-                                                                                                                                                                                                                                                                                                                                                                                                                    max-width: 900px;
-                                                                                                                                                                                                                                                                                                                                                                                                                          margin: auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                padding: 40px 20px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                    }
-
-                                                                                                                                                                                                                                                                                                                                                                                                                                        .card {
-                                                                                                                                                                                                                                                                                                                                                                                                                                              background: rgba(255,255,255,0.02);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    border: 1px solid rgba(255,255,255,0.06);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          padding: 25px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                border-radius: 12px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                      margin-top: 30px;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            backdrop-filter: blur(8px);
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  transition: 0.3s;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           .card:hover {
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 transform: translateY(-4px);
