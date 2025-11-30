@@ -1,4 +1,4 @@
--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -114,6 +114,12 @@
       backdrop-filter: blur(5px);
       border-top: 2px solid #111;
     }
+  </style>
+  <audio id="bg-audio" autoplay loop>
+    <source src="Soothing Sounds of Sebring Ambient Relaxation.mp3" type="audio/mpeg">
+  </audio>
+</head>
+
 <body>
   <header>
     <h1>Juan Cruz</h1>
@@ -147,5 +153,16 @@
     </footer>
 
   </div>
+  <script>
+    // Reproduce el audio cuando el usuario toca o hace clic
+    const audio = document.getElementById('bg-audio');
+    function enableAudio() {
+      audio.play();
+      document.removeEventListener('click', enableAudio);
+      document.removeEventListener('touchstart', enableAudio);
+    }
+    document.addEventListener('click', enableAudio);
+    document.addEventListener('touchstart', enableAudio);
+  </script>
 </body>
 </html>
